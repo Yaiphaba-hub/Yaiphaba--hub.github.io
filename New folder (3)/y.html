@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicHub - Your Music Destination</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Login Page -->
+    <div id="login-page" class="page active">
+        <div class="login-container">
+            <div class="logo">
+                <i class="fas fa-music"></i>
+                <h1>MusicHub</h1>
+            </div>
+            <form class="login-form" action="#player-page" method="get">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                    <span class="error-message">Please enter a valid email address</span>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required minlength="6">
+                    <span class="error-message">Password must be at least 6 characters</span>
+                </div>
+                <button type="submit" class="login-btn">Sign In</button>
+                <div class="signup-link">
+                    Don't have an account? <a href="#">Sign up</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Audio Player Page -->
+    <div id="player-page" class="page">
+        <header>
+            <div class="header-left">
+                <i class="fas fa-music"></i>
+                <h1>MusicHub</h1>
+            </div>
+            <div class="header-right">
+                <span class="username">Welcome, User!</span>
+                <button class="logout-btn">Logout</button>
+            </div>
+        </header>
+        
+        <main>
+            <div class="player-container">
+                <div class="album-art">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/9/9f/Queen_A_Night_At_The_Opera.png" alt="Album Art" id="album-art">
+                </div>
+                
+                <div class="song-info">
+                    <h2 id="song-title">Bohemian Rhapsody</h2>
+                    <h3 id="artist-name">Queen</h3>
+                    <h4 id="album-name">A Night at the Opera</h4>
+                </div>
+                
+                <div class="player-controls">
+                    <audio id="audio-player" controls>
+                        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    
+                    <div class="custom-controls">
+                        <button class="control-btn" id="prev-btn"><i class="fas fa-step-backward"></i></button>
+                        <button class="control-btn" id="play-btn"><i class="fas fa-play"></i></button>
+                        <button class="control-btn" id="next-btn"><i class="fas fa-step-forward"></i></button>
+                    </div>
+                    
+                    <div class="progress-container">
+                        <span id="current-time">0:00</span>
+                        <input type="range" id="progress-bar" value="0">
+                        <span id="duration">0:00</span>
+                    </div>
+                    
+                    <div class="volume-control">
+                        <i class="fas fa-volume-down"></i>
+                        <input type="range" id="volume-bar" min="0" max="1" step="0.1" value="0.7">
+                        <i class="fas fa-volume-up"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="playlist-container">
+                <h3>Your Playlist</h3>
+                <ul class="playlist">
+                    <li class="playlist-item active">
+                        <span class="song-number">1</span>
+                        <span class="song-title">Bohemian Rhapsody</span>
+                        <span class="song-duration">5:55</span>
+                    </li>
+                    <li class="playlist-item">
+                        <span class="song-number">2</span>
+                        <span class="song-title">Hotel California</span>
+                        <span class="song-duration">6:30</span>
+                    </li>
+                    <li class="playlist-item">
+                        <span class="song-number">3</span>
+                        <span class="song-title">Sweet Child O'Mine</span>
+                        <span class="song-duration">5:56</span>
+                    </li>
+                    <li class="playlist-item">
+                        <span class="song-number">4</span>
+                        <span class="song-title">Smells Like Teen Spirit</span>
+                        <span class="song-duration">5:01</span>
+                    </li>
+                    <li class="playlist-item">
+                        <span class="song-number">5</span>
+                        <span class="song-title">Imagine</span>
+                        <span class="song-duration">3:04</span>
+                    </li>
+                </ul>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
