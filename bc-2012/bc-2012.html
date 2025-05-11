@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MelodyStream - Player</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Audio Player Page -->
+    <div class="player-container">
+        <!-- Sidebar Navigation -->
+        <div class="sidebar">
+            <div class="logo">
+                <h1>Melody<span>Stream</span></h1>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li class="active"><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#"><i class="fas fa-search"></i> Discover</a></li>
+                    <li><a href="#"><i class="fas fa-heart"></i> Favorites</a></li>
+                    <li><a href="#"><i class="fas fa-clock"></i> Recent</a></li>
+                    <li><a href="#"><i class="fas fa-list"></i> Playlists</a></li>
+                </ul>
+            </nav>
+            
+            <div class="user-profile">
+                <img src="https://via.placeholder.com/40" alt="User">
+                <div class="user-info">
+                    <span>John Doe</span>
+                    <a href="#">Sign Out</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="header">
+                <h2>Good Afternoon</h2>
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search for songs, artists...">
+                </div>
+            </div>
+            
+            <!-- Featured Playlist -->
+            <div class="featured-playlist">
+                <h3>Featured Playlist</h3>
+                <div class="playlist-card">
+                    <div class="playlist-info">
+                        <h4>Chill Vibes</h4>
+                        <p>Relaxing tunes for your downtime</p>
+                        <button class="play-btn">Play All</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Recently Played -->
+            <div class="recently-played">
+                <h3>Recently Played</h3>
+                <div class="songs-grid">
+                    <div class="song-card">
+                        <img src="https://via.placeholder.com/150" alt="Song Cover">
+                        <h4>Sunset Dreams</h4>
+                        <p>Chillhop Essentials</p>
+                    </div>
+                    <div class="song-card">
+                        <img src="https://via.placeholder.com/150" alt="Song Cover">
+                        <h4>Ocean Breeze</h4>
+                        <p>Lofi Beats</p>
+                    </div>
+                    <div class="song-card">
+                        <img src="https://via.placeholder.com/150" alt="Song Cover">
+                        <h4>Midnight Thoughts</h4>
+                        <p>Jazz Vibes</p>
+                    </div>
+                    <div class="song-card">
+                        <img src="https://via.placeholder.com/150" alt="Song Cover">
+                        <h4>Morning Coffee</h4>
+                        <p>Acoustic Mornings</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Player Controls -->
+        <div class="player-controls">
+            <div class="song-info">
+                <img src="https://via.placeholder.com/50" alt="Now Playing">
+                <div>
+                    <h4>Sunset Dreams</h4>
+                    <p>Chillhop Essentials</p>
+                </div>
+                <button class="like-btn"><i class="far fa-heart"></i></button>
+            </div>
+            
+            <div class="player-main">
+                <div class="controls">
+                    <button><i class="fas fa-random"></i></button>
+                    <button><i class="fas fa-step-backward"></i></button>
+                    <button class="play-pause"><i class="fas fa-play"></i></button>
+                    <button><i class="fas fa-step-forward"></i></button>
+                    <button><i class="fas fa-redo"></i></button>
+                </div>
+                <div class="progress-bar">
+                    <span>1:23</span>
+                    <input type="range" min="0" max="100" value="35" class="slider">
+                    <span>3:45</span>
+                </div>
+            </div>
+            
+            <div class="volume-controls">
+                <i class="fas fa-volume-up"></i>
+                <input type="range" min="0" max="100" value="70" class="slider">
+            </div>
+            
+            <audio controls class="audio-element" style="display: none;">
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+</body>
+</html>
